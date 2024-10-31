@@ -241,6 +241,10 @@ txSetColor(TX_BLACK);
     txSetColor(RGB (255, 201, 14));
     txSetFillColor(RGB (255, 201, 14));
     txRectangle(x+0-0, y+450-450, x+800-0, y+600-450);
+    //sea
+    txSetFillColor(RGB(0,130,185));
+  txSetColor(RGB(0,130,185));
+  txRectangle(x+-200-0,450,x+200-0,600);
     //bar
     txSetColor(TX_BLACK);
     txSetFillColor(RGB(139,87,58));
@@ -271,7 +275,10 @@ int main()
         int xBar = 0;
         int yBar = 450;
 
-
+    //берег
+        int xKarabl = 838;
+        int yKarabl = 80;
+        int xSea = 500;
 
 
 
@@ -597,10 +604,7 @@ int main()
     xCloud = -50;
     xSun = -50;
 
-    //берег
-    int xKarabl = 838;
-    int yKarabl = 80;
-    int xSea = 500;
+
 
 
     while (xMan<460)
@@ -925,24 +929,262 @@ int main()
     }
 
 
-    xBar = 0;
+    xBar = 200;
     yBar = 450;
-    xSea = -600;
-    xKarabl = 130;
+    yMan = 150;
+    xMan = 90;
+    xKarabl = 0;
     yKarabl = 80;
+    xSun = 0;
 
 
-    while(xBar>600)
+    while (xBar>50)
     {
     txBegin();
     drawSky(RGB (31, 196, 224));
     drawKarabl(xKarabl,yKarabl);
     bar(xBar,yBar);
-    Sea(xSea);
+    Man(xMan,yMan,xLegs);
     txEnd();
     xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs + 35;
+
+    txSleep(15);
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs - 35;
+
     txSleep(15);
     }
+
+
+
+    while (xBar>0)
+    {
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs - 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs - 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs - 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs + 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs + 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xBar = xBar - 3;
+    xKarabl = xKarabl - 3;
+    xLegs = xLegs + 13;
+    yMan = yMan - 3;
+
+    txSleep(20);
+    }
+
+    while (yMan<300)
+    {
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs - 13;
+    yMan = yMan + 6;
+    xMan = xMan + 1;
+
+
+    txSleep(20);
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs - 13;
+    yMan = yMan + 6;
+    xMan = xMan + 1;
+
+    txSleep(20);
+
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs + 13;
+    yMan = yMan + 6;
+    xMan = xMan + 1;
+
+    txSleep(20);
+
+
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs + 13;
+    yMan = yMan + 6;
+    xMan = xMan + 1;
+
+    txSleep(20);
+    }
+
+
+while (xMan<340)
+    {
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+
+
+    txSleep(20);
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+
+    txSleep(20);
+
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawKarabl(xKarabl,yKarabl);
+    bar(xBar,yBar);
+    Man(xMan,yMan,xLegs);
+    txEnd();
+
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+
+    txSleep(20);
+    }
+
+
 
 
 
